@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = process.env.PORT || 80;
+const port = 80;
 
 app.get('/', (req, res) => {
     res.send('¡Hola desde Node.js!');
