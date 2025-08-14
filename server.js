@@ -2,8 +2,7 @@ const express = require('express');
 const app = express();
 
 // URL pública de tu imagen en S3
-const imagenS3 = 'https://s3-ubuntu-proyect.s3.us-east-2.amazonaws.com/aws-servicios-principales.jpg'; 
-// ⬆️ Cámbialo por la URL real de tu archivo en S3
+const imagenS3 = 'https://s3-ubuntu-proyect.s3.us-east-2.amazonaws.com/aws-servicios-principales.jpg';
 
 app.get('/', (req, res) => {
     res.send(`
@@ -15,7 +14,7 @@ app.get('/', (req, res) => {
         </head>
         <body style="font-family: Arial, sans-serif; text-align: center; padding-top: 50px;">
             <h1 style="color: #2c3e50;">mi primer despliegue de Aplicación Web en AWS con Node.js</h1>
-            <img src="${imagenS3}" alt="Imagen desde S3" style="max-width: 400px; margin-top: 20px;">
+            <img src="${imagenS3}" alt="Imagen desde S3" style="max-width: 400px; margin-top: 20px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0,0,0,0.2);">
         </body>
         </html>
     `);
