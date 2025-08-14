@@ -1,12 +1,24 @@
 const express = require('express');
 const app = express();
-const path = require('path');
 
-// Servir archivos estáticos desde la carpeta 'public'
-app.use(express.static(path.join(__dirname, 'public')));
+// URL pública de tu imagen en S3
+const imagenS3 = 'https://s3-ubuntu-proyect.s3.us-east-2.amazonaws.com/aws-servicios-principales.jpg'; 
+// ⬆️ Cámbialo por la URL real de tu archivo en S3
 
 app.get('/', (req, res) => {
-    res.send('<h1>¡Hola desde Node.js!</h1><img src="/mi-imagen.jpg" alt="Imagen">');
+    res.send(`
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <title>Mi primer despliegue</title>
+        </head>
+        <body style="font-family: Arial, sans-serif; text-align: center; padding-top: 50px;">
+            <h1 style="color: #2c3e50;">mi primer despliegue de Aplicación Web en AWS con Node.js</h1>
+            <img src="${imagenS3}" alt="Imagen desde S3" style="max-width: 400px; margin-top: 20px;">
+        </body>
+        </html>
+    `);
 });
 
 const PORT = process.env.PORT || 80;
