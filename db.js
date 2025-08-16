@@ -5,7 +5,7 @@ const connection = mysql.createConnection({
   host: 'mrzukaop7u7.cv22q2o0a1t9.us-east-2.rds.amazonaws.com',
   user: 'admin',
   password: '753159#MrZukaOp',
-  database: 'mrzukaop7u7',
+  database: 'mi_app_db',
   connectTimeout: 10000 // 10 segundos de timeout para la conexión
 });
 
