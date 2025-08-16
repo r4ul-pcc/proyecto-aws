@@ -1,11 +1,11 @@
 const mysql = require('mysql2');
 
+// Configurar la conexión a la base de datos MySQL
 const connection = mysql.createConnection({
-    host: 'bd-aws.cv22q2o0a1t9.us-east-2.rds.amazonaws.com', // Endpoint de la base de datos RDS
-    user: 'admin', // Tu usuario de base de datos
-    password: '753159#MrZukaOp', // La contraseña de tu base de datos
-    database: 'db-aws', // El nombre de la base de datos
-    port: 3306 // Asegúrate de que el puerto es el correcto (3306 por defecto para MySQL)
+  host: 'mrzukaop7u7.cv22q2o0a1t9.us-east-2.rds.amazonaws.com',
+  user: 'admin',
+  password: '753159#MrZukaOp',
+  database: 'mrzukaop7u7'
 });
 
 connection.connect((err) => {
